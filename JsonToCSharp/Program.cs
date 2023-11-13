@@ -54,7 +54,8 @@ namespace JsonToCSharp
         {
             CSharpCodeWriterConfig csharpCodeWriterConfig = new CSharpCodeWriterConfig
             {
-                OutputMembers = OutputMembers.AsPublicFields
+                OutputMembers = OutputMembers.AsProperties,
+                UsePascalCase = true
             };
             CSharpCodeWriter csharpCodeWriter = new CSharpCodeWriter(csharpCodeWriterConfig);
             JsonClassGenerator jsonClassGenerator = new JsonClassGenerator
